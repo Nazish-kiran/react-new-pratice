@@ -1,6 +1,6 @@
 import "./globals.css";
 import Header from "@/Components/Header";
-
+import MyContext from "@/Helper/Context";
 
 export const metadata = {
   title: "Create Next App",
@@ -10,9 +10,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body cz-shortcut-listen="true">
-      <Header logo={"React"} />
-        {children}
+      <body cz-shortcut-listen="true" suppressHydrationWarning>
+        <Header logo={"LOGO"} />
+     
+        <MyContext>{children}</MyContext>
+
       </body>
     </html>
   );
